@@ -46,8 +46,8 @@ const without = function(arr1, itemsToRemove) {
   return newArray;
 };
 
+// Testing:
 const words = ["hello", "world", "lighthouse"];
-
 //remove "hello", and compare the result..
 console.log("Testing without..")
 assertArraysEqual(without(words, ["hello"]), ["world", "lighthouse"]);
