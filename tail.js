@@ -1,9 +1,9 @@
 const tail = function(data) {
-  let arrayLen = data.length;
   let result = data;
-
-  if (arrayLen > 2) {
-    result = result.slice(1,arrayLen);
+  if (data.length > 2) {
+    result = result.slice(1, data.length);
   }
   return result;
 };
+
+module.exports = tail;
