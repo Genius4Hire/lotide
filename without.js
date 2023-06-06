@@ -46,20 +46,20 @@ const without = function(arr1, itemsToRemove) {
   return newArray;
 };
 
-// Testing:
-const words = ["hello", "world", "lighthouse"];
-//remove "hello", and compare the result..
-console.log("Testing without..")
-assertArraysEqual(without(words, ["hello"]), ["world", "lighthouse"]);
-console.log();
-//make sure original array is intact..
-console.log("Testing integrity of original array..")
-assertArraysEqual(["hello", "world", "lighthouse"], words);
-console.log();
-console.log("---------- Tests ----------")
-assertArraysEqual(without([1, 2, 3], [1]), [2, 3]);
-assertArraysEqual(without(["1", "2", "3"], ["3"]), ["1", "2"]);
-console.log();
+// // Testing:
+// const words = ["hello", "world", "lighthouse"];
+// //remove "hello", and compare the result..
+// console.log("Testing without..")
+// assertArraysEqual(without(words, ["hello"]), ["world", "lighthouse"]);
+// console.log();
+// //make sure original array is intact..
+// console.log("Testing integrity of original array..")
+// assertArraysEqual(["hello", "world", "lighthouse"], words);
+// console.log();
+// console.log("---------- Tests ----------")
+// assertArraysEqual(without([1, 2, 3], [1]), [2, 3]);
+// assertArraysEqual(without(["1", "2", "3"], ["3"]), ["1", "2"]);
+// console.log();
 
 
 module.exports = without;

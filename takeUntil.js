@@ -33,25 +33,26 @@ const takeUntil = function(array, callback) {
   return output;
 };
 
-// testing
+// // testing
 
-let data = [1, 2, 5, 7, 2, -1, 2, 4, 5];
-let results = takeUntil(data, x => x < 0);
-console.log("Results:", results);
-assertArraysEqual(results, [ 1, 2, 5, 7, 2 ]);
+// let data = [1, 2, 5, 7, 2, -1, 2, 4, 5];
+// let results = takeUntil(data, x => x < 0);
+// console.log("Results:", results);
+// assertArraysEqual(results, [ 1, 2, 5, 7, 2 ]);
 
-console.log('---');
+// console.log('---');
 
-data = ["I\'ve", "been", "to", "Hollywood", ",", "I\'ve", "been", "to", "Redwood"];
-results = takeUntil(data, x => x === ',');
-console.log("Results:", results);
-assertArraysEqual(results, [ 'I\'ve', 'been', 'to', 'Hollywood' ]);
+// data = ["I\'ve", "been", "to", "Hollywood", ",", "I\'ve", "been", "to", "Redwood"];
+// results = takeUntil(data, x => x === ',');
+// console.log("Results:", results);
+// assertArraysEqual(results, [ 'I\'ve', 'been', 'to', 'Hollywood' ]);
 
-console.log('---');
+// console.log('---');
 
-data = ["You", "don/'t", "know", "what", "it/'s", "like"];
-results = takeUntil(data, x => x === 'what');
-console.log("Results:", results);
-assertArraysEqual(results, ["You", "don/'t", "know"]);
+// data = ["You", "don/'t", "know", "what", "it/'s", "like"];
+// results = takeUntil(data, x => x === 'what');
+// console.log("Results:", results);
+// assertArraysEqual(results, ["You", "don/'t", "know"]);
 
 
+module.exports = takeUntil;

@@ -31,28 +31,29 @@ const map = function(array, callback) {
   return results;
 }
 
-const words = ["ground", "control", "to", "major", "tom"];
+// const words = ["ground", "control", "to", "major", "tom"];
 
-// define expected test results...
-const firstLetters = ["g","c","t","m","t"];
-const whoohoo = ['groundwhoohoo','controlwhoohoo','towhoohoo','majorwhoohoo','tomwhoohoo'];
-const abrev = [ 'gd', 'cl', 'to', 'mr', 'tm' ];
+// // define expected test results...
+// const firstLetters = ["g","c","t","m","t"];
+// const whoohoo = ['groundwhoohoo','controlwhoohoo','towhoohoo','majorwhoohoo','tomwhoohoo'];
+// const abrev = [ 'gd', 'cl', 'to', 'mr', 'tm' ];
 
-// create an array for some results..
-let results = [];
+// // create an array for some results..
+// let results = [];
 
-// Grab the first letter with map() and put it in 'results'..
-results = map(words, word => word[0]);
-console.log("Result: ", results);
-assertArraysEqual(results, firstLetters);
+// // Grab the first letter with map() and put it in 'results'..
+// results = map(words, word => word[0]);
+// console.log("Result: ", results);
+// assertArraysEqual(results, firstLetters);
 
-// Add 'whoohoo' to the end of each string in an array with map() and put it in 'results'..
-results = map(words, word => word + "whoohoo");
-console.log("Result: ", results);
-assertArraysEqual(results, whoohoo);
+// // Add 'whoohoo' to the end of each string in an array with map() and put it in 'results'..
+// results = map(words, word => word + "whoohoo");
+// console.log("Result: ", results);
+// assertArraysEqual(results, whoohoo);
 
-// Grab the first letter and last letter of each element with map() and put it in 'results'..
-results = map(words, word => word[0] + word[word.length -1]);
-console.log("Result: ", results);
-assertArraysEqual(results, abrev);
+// // Grab the first letter and last letter of each element with map() and put it in 'results'..
+// results = map(words, word => word[0] + word[word.length -1]);
+// console.log("Result: ", results);
+// assertArraysEqual(results, abrev);
 
+module.exports = map;

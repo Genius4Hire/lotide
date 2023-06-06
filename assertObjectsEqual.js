@@ -35,6 +35,14 @@ const eqObjects = function(object1, object2) {
   return true;
 };
 
+const assertEqual = function(actual, expected) {
+  if (actual === expected) {
+    console.log(`🤌: ${actual} === ${expected}`);
+  } else {
+    console.log(`😒 : ${actual} !== ${expected}`);
+  }
+};
+
 const assertObjectsEqual = function(actual, expected) {
   // locally enable object inspection, so we have a richer set of information for each object..
   const inspect = require('util').inspect;
@@ -45,40 +53,34 @@ const assertObjectsEqual = function(actual, expected) {
   }
 };
 
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`🤌: ${actual} === ${expected}`);
-  } else {
-    console.log(`😒 : ${actual} !== ${expected}`);
-  }
-};
-
 
 // testing..
 
-const shirtObject = { 
-  color: "red", 
-  size: "medium" 
-};
+// const shirtObject = { 
+//   color: "red", 
+//   size: "medium" 
+// };
 
-const anotherShirtObject = { 
-  size: "medium", 
-  color: "red" 
-};
+// const anotherShirtObject = { 
+//   size: "medium", 
+//   color: "red" 
+// };
 
-const longSleeveShirtObject = { 
-  size: "medium", 
-  color: "red", 
-  sleeveLength: "long" 
-};
+// const longSleeveShirtObject = { 
+//   size: "medium", 
+//   color: "red", 
+//   sleeveLength: "long" 
+// };
 
-console.log(eqObjects(shirtObject , anotherShirtObject)); // => true
-console.log(eqObjects(shirtObject , longSleeveShirtObject)); // => false
+// console.log(eqObjects(shirtObject , anotherShirtObject)); // => true
+// console.log(eqObjects(shirtObject , longSleeveShirtObject)); // => false
 
-assertEqual(eqObjects(shirtObject , anotherShirtObject),true)
-assertEqual(eqObjects(shirtObject , longSleeveShirtObject),false)
+// assertEqual(eqObjects(shirtObject , anotherShirtObject),true)
+// assertEqual(eqObjects(shirtObject , longSleeveShirtObject),false)
 
-// testing the output with assertions..
+// // testing the output with assertions..
 
-assertObjectsEqual(eqObjects(shirtObject , anotherShirtObject),true);
-assertObjectsEqual(eqObjects(shirtObject , longSleeveShirtObject),false)
+// assertObjectsEqual(eqObjects(shirtObject , anotherShirtObject),true);
+// assertObjectsEqual(eqObjects(shirtObject , longSleeveShirtObject),false)
+
+module.exports = assertObjectsEqual;

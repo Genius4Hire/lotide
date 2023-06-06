@@ -2,7 +2,7 @@ const assert = require('chai').assert;
 const tail = require('../tail');
 
 
-describe("#head", () => {
+describe("#tail", () => {
   it("returns ['Lighthouse', 'Labs'] for ['Hello', 'Lighthouse', 'Labs']", () => {
     assert.sameOrderedMembers(tail(['Hello', 'Lighthouse', 'Labs']), ['Lighthouse', 'Labs']);
   });

@@ -40,31 +40,32 @@ const eqObjects = function(object1, object2) {
     }
   }
   // all is well, both the key names, as well as each value are identical, so return true.
-  // console.log('list1:', object1);
-  // console.log('list2', object2);
   return true;
 };
 
 // testing..
 
-const shirtObject = { 
-  color: "red", 
-  size: "medium" 
-};
+// const shirtObject = { 
+//   color: "red", 
+//   size: "medium" 
+// };
 
-const anotherShirtObject = { 
-  size: "medium", 
-  color: "red" 
-};
+// const anotherShirtObject = { 
+//   size: "medium", 
+//   color: "red" 
+// };
 
-const longSleeveShirtObject = { 
-  size: "medium", 
-  color: "red", 
-  sleeveLength: "long" 
-};
+// const longSleeveShirtObject = { 
+//   size: "medium", 
+//   color: "red", 
+//   sleeveLength: "long" 
+// };
 
-console.log(eqObjects(shirtObject , anotherShirtObject)); // => true
-console.log(eqObjects(shirtObject , longSleeveShirtObject)); // => false
+// console.log(eqObjects(shirtObject , anotherShirtObject)); // => true
+// console.log(eqObjects(shirtObject , longSleeveShirtObject)); // => false
 
-assertEqual(eqObjects(shirtObject , anotherShirtObject),true)
-assertEqual(eqObjects(shirtObject , longSleeveShirtObject),false)
+// assertEqual(eqObjects(shirtObject , anotherShirtObject),true)
+// assertEqual(eqObjects(shirtObject , longSleeveShirtObject),false)
+
+
+module.exports = eqObjects;
