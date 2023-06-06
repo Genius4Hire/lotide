@@ -1,13 +1,21 @@
-const assertEqual = require('../assertEqual');
-const assertArraysEqual = require('../assertArraysEqual');
+const assert = require('chai').assert;
 const tail = require('../tail');
 
 
-const words = ["Hello", "Lighthouse", "Labs"];
-const result = tail(words); 
+describe("#head", () => {
+  it("returns ['Lighthouse', 'Labs'] for ['Hello', 'Lighthouse', 'Labs']", () => {
+    assert.sameOrderedMembers(tail(['Hello', 'Lighthouse', 'Labs']), ['Lighthouse', 'Labs']);
+  });
 
-// Test Case: Remove "Hello"
-assertArraysEqual(result, ["Lighthouse", "Labs"]); 
+  it("returns ['Labs', 101] for ['Lighthouse', 'Labs', 101]", () => {
+    assert.sameOrderedMembers(tail(['Lighthouse', 'Labs', 101]), ['Labs', 101]);
+  });
 
-// Test Case: Check the original array
-assertEqual(words.length, 3); // original array should still have 3 elements!
+  it("returns ['5'] for ['5']", () => {
+    assert.sameOrderedMembers(tail(['5']), ['5']); 
+  });
+
+
+});
+
+
